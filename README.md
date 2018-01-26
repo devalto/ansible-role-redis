@@ -1,7 +1,6 @@
-# jpnewman.redis
+# devalto.redis
 
-[![Ansible Role](https://img.shields.io/ansible/role/9598.svg?maxAge=2592000)](https://galaxy.ansible.com/jpnewman/redis/)
-[![Build Status](https://travis-ci.org/jpnewman/ansible-role-redis.svg?branch=master)](https://travis-ci.org/jpnewman/ansible-role-redis)
+[![Ansible Role](https://img.shields.io/ansible/role/9598.svg?maxAge=2592000)](https://galaxy.ansible.com/devalto/redis/)
 
 This is a Ansible role to config Redis
 
@@ -24,7 +23,7 @@ none
 
     - hosts: servers
       roles:
-         - { role: jpnewman.redis, tags: ["redis"] }
+         - { role: devalto, tags: ["redis"] }
 
 ## License
 

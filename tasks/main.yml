@@ -40,7 +40,7 @@
     state: present
   when: sysctl_vm_overcommit_memory
 
-- name: Diable transparent_hugepage
+- name: Disable transparent_hugepage
   shell: "echo never > {{ item }}"
   with_items:
     - /sys/kernel/mm/transparent_hugepage/enabled
