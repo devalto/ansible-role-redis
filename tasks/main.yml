@@ -57,18 +57,3 @@
     - "/sys/kernel/mm/transparent_hugepage/enabled"
     - "/sys/kernel/mm/transparent_hugepage/defrag"
   notify: restart redis
-
-- name: Configure transparent_hugepage grub
-  lineinfile:
-    dest: /etc/default/grub
-    regexp: "^GRUB_CMDLINE_LINUX_DEFAULT="
-    line: 'GRUB_CMDLINE_LINUX_DEFAULT="{{ grub_cmdline_linux_default }}"'
-  register: grub_file
-  tags: grub
-
-- name: Update grub
-  command: sudo update-grub
-  when: grub_file | changed
-
-- name: Flush handlers
-  meta: flush_handlers
