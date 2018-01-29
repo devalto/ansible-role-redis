@@ -54,6 +54,6 @@
     insertbefore: "exit 0"
   with_items:
     - "sysctl -w net.core.somaxconn=65535"
-    - "/sys/kernel/mm/transparent_hugepage/enabled"
-    - "/sys/kernel/mm/transparent_hugepage/defrag"
+    - "echo never > /sys/kernel/mm/transparent_hugepage/enabled"
+    - "echo never > /sys/kernel/mm/transparent_hugepage/defrag"
   notify: restart redis
