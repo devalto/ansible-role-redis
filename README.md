@@ -23,7 +23,7 @@ none
 
     - hosts: servers
       roles:
-         - { role: devalto, tags: ["redis"] }
+         - { role: devalto.redis, tags: ["redis"] }
 
 ## License
 
